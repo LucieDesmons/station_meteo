@@ -8,6 +8,6 @@ json_data = requests.get(url) .json()               #
 cloud = json_data['weather'] [0] ['description']    # Nous permet d'affiché la description lors de l'execution du script dans un print()
 humidity = json_data['main'] ['humidity']           # ainsi que l'humidité dans un print()
 print("Actuellement le temps est : " + cloud)
-print("Et le taux d'humidité est de : ", end="") ; print(humidity, end="%") # le end permet de ne pas aller a la ligne &ou ajouter un print()
+print("Et le taux d'humidité est de : ", end="") ; print(humidity, end="%") # le end="" permet de ne pas aller a la ligne &/ou ajouter un print()
 
 # si vous voulez essayer le script : executer le et taper le nom de la ville qui vous interesse :) . *Yann
