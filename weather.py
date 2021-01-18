@@ -7,6 +7,8 @@ url = api_address + city                            # concaténation URL + Ville
 json_data = requests.get(url) .json()               #
 cloud = json_data['weather'] [0] ['description']    # Nous permet d'affiché la description lors de l'execution du script dans un print()
 humidity = json_data['main'] ['humidity']           # ainsi que l'humidité dans un print()
+t = json_data['main']['temp']
+print("La température est de {} °c".format(t-273.15))
 print("Actuellement le temps est : " + cloud)
 print("Et le taux d'humidité est de : ", end="") ; print(humidity, end="%") # le end="" permet de ne pas aller a la ligne &/ou ajouter un print()
 
