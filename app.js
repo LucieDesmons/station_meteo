@@ -18,6 +18,7 @@ async function main(withIP = true){
 // Asynchrone permet de faire des tâches en parallèle
 // Fonction fetch permet d'aller récupérer des informations sur un autre serveur/ de l'AJAX 
 //1. Choper l'adresse IP du PC qui ouvre la page : https://api.ipify.org?format=json
+// a tester en dehors de l'entreprise ... car IP pas normal 
         const ip = await fetch('https://api.ipify.org?format=json')
             .then(resultat => resultat.json())
             .then(json => json.ip);
