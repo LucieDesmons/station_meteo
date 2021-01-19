@@ -23,7 +23,7 @@ async function main(withIP = true){
             .then(resultat => resultat.json())
             .then(json => json.ip);
             
-        ville = await fetch ("https://freegeoip.app/json/" + ip) /*("https://api.ipstack.com/" + ip + "?access_key=19e49ba74324681734a7940e19ef2a2b")*/
+        ville = await fetch ("https://freegeoip.app/json/" + ip) /*TEST : ("https://api.ipstack.com/" + ip + "?access_key=19e49ba74324681734a7940e19ef2a2b")*/
             .then(resultat => resultat.json())
             .then(json => json.city);
             
