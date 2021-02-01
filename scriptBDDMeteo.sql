@@ -1,6 +1,6 @@
-CREATE DATABASE station_meteo;
-CREATE USER station_meteo;
-GRANT ALL PRIVILEGES ON station_meteo.* TO station_meteo;
+CREATE DATABASE station_meteo CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE USER station_meteo@localhost;
+GRANT ALL PRIVILEGES ON station_meteo.* TO station_meteo@localhost;
 FLUSH PRIVILEGES;
 
 CREATE TABLE emplacements(
