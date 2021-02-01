@@ -1,29 +1,25 @@
---Script de création de la base de données météo : 
-CREATE DATABASE meteo ;
-CREATE USER ‘meteo’@’%’ IDENTIFIED BY ‘meteo ‘ ;
-GRANT ALL PRIVILEGES ON meteo.* TO ‘meteo’@’%’ ;
+CREATE DATABASE station_meteo ;
+CREATE USER 'meteorologue';
+GRANT ALL PRIVILEGES ON station_meteo.* TO 'meteorologue' ;
 FLUSH PRIVILEGES ;
-CREATE TABLE emplacement(
-   id_emplacement INT NOT NULL,
-   nom_pieces VARCHAR(50) DEFAULT NULL,
-   PRIMARY KEY(id_emplacement)
+
+CREATE TABLE emplacements(
+   id_emplacement INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   nom_emplacement VARCHAR(50) DEFAULT ''
 );
 
-CREATE TABLE sonde(
-   id_sonde INT NOT NULL,
-   emplacement_sonde VARCHAR(50) NOT NULL,
+CREATE TABLE sondes(
+   id_sonde INT NOT NULL PRIMARY KEY,
    id_emplacement INT NOT NULL,
-   PRIMARY KEY(id_sonde),
-   FOREIGN KEY(id_emplacement) REFERENCES Emplacement(id_emplacement)
+   FOREIGN KEY(id_emplacement) REFERENCES emplacements(id_emplacement)
 );
 
-CREATE TABLE meteo(
-   date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-   temperature DECIMAL(5,2) DEFAULT NULL,
+CREATE TABLE donnees_meteo(
+   id_releve_meteo INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   date_heure TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+   temperature DECIMAL(6,2) DEFAULT NULL,
    humidite DECIMAL(6,2) DEFAULT NULL,
-   icone_meteo VARCHAR(6) DEFAULT NULL,
    id_sonde INT NOT NULL,
-   PRIMARY KEY(date),
    FOREIGN KEY(id_sonde) REFERENCES sonde(id_sonde)
 );
 	
