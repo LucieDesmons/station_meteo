@@ -1,25 +1,27 @@
-CREATE DATABASE station_meteo ;
-CREATE USER 'meteorologue';
-GRANT ALL PRIVILEGES ON station_meteo.* TO 'meteorologue' ;
-FLUSH PRIVILEGES ;
+CREATE DATABASE station_meteo;
+CREATE USER station_meteo;
+GRANT ALL PRIVILEGES ON station_meteo.* TO station_meteo;
+FLUSH PRIVILEGES;
 
 CREATE TABLE emplacements(
-   id_emplacement INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-   nom_emplacement VARCHAR(50) DEFAULT ''
+   id_emplacement INT NOT NULL AUTO_INCREMENT,
+   nom_emplacement VARCHAR(50) DEFAULT '',
+   CONSTRAINT pk_id_emplacement PRIMARY KEY(id_emplacement)
 );
 
 CREATE TABLE sondes(
-   id_sonde INT NOT NULL PRIMARY KEY,
+   id_sonde INT NOT NULL,
    id_emplacement INT NOT NULL,
-   FOREIGN KEY(id_emplacement) REFERENCES emplacements(id_emplacement)
+   CONSTRAINT pk_id_sonde PRIMARY KEY(id_sonde),
+   CONSTRAINT fk_id_emplacement FOREIGN KEY(id_emplacement) REFERENCES emplacements(id_emplacement)
 );
 
 CREATE TABLE donnees_meteo(
-   id_releve_meteo INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   id_releve_meteo INT NOT NULL AUTO_INCREMENT,
    date_heure TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
    temperature DECIMAL(6,2) DEFAULT NULL,
    humidite DECIMAL(6,2) DEFAULT NULL,
    id_sonde INT NOT NULL,
-   FOREIGN KEY(id_sonde) REFERENCES sonde(id_sonde)
+   CONSTRAINT pk_id_releve_meteo PRIMARY KEY(id_releve_meteo),
+   CONSTRAINT fk_id_sonde FOREIGN KEY(id_sonde) REFERENCES sonde(id_sonde)
 );
-	
