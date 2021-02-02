@@ -78,55 +78,6 @@ class Data
          $this->humidite = $dataRow['humidite']; 
          $this->id_sonde = $dataRow['id_sonde']; 
     } 
-
-// UPDATE 
-    public function updateData()
-    { 
-        $sqlQuery = "UPDATE "
-        . $this->db_table 
-        ." SET 
-        id_releve_meteo = :id_releve_meteo,
-        date_heure = :date_heure,
-        temperature = :temperature,
-        humidite = :humidite,
-        id_sonde = :id_sonde
-            WHERE id = :id";
-
-        $stmt = $this->connection->prepare($sqlQuery); 
-        $this->id_releve_meteo=htmlspecialchars(strip_tags($this->id_releve_meteo)); 
-        $this->date_heure=htmlspecialchars(strip_tags($this->date_heure)); 
-        $this->temperature=htmlspecialchars(strip_tags($this->temperature)); 
-        $this->humidite=htmlspecialchars(strip_tags($this->humidite)); 
-        $this->id_sonde=htmlspecialchars(strip_tags($this->id_sonde)); 
-        $this->id=htmlspecialchars(strip_tags($this->id)); 
-
-        // bind data 
-        $stmt->bindParam(":id_releve_meteo", $this->id_releve_meteo); 
-        $stmt->bindParam(":date_heure", $this->date_heure); 
-        $stmt->bindParam(":temperature", $this->temperature); 
-        $stmt->bindParam(":humidite", $this->humidite); 
-        $stmt->bindParam(":id_sonde", $this->id_sonde);
-        $stmt->bindParam(":id", $this->id);
-
-        if($stmt->execute())
-        {
-            return true; 
-        }return false; 
-    } 
-        
-    // DELETE 
-        function deleteData()
-        { 
-            $sqlQuery = "DELETE FROM " . $this->db_table . " WHERE id = ?";
-            $stmt = $this->connection->prepare($sqlQuery); $this->id=htmlspecialchars(strip_tags($this->id)); 
-            $stmt->bindParam(1, $this->id);
-
-            if($stmt->execute())
-            {
-                return true; 
-            }return false; 
-        }
-            
 }
                 
 ?>
