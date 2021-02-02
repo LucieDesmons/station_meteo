@@ -4,7 +4,7 @@ class Data
 { 
 
 // Connection 
-    private $conn; 
+    private $connection; 
 
 // Table 
     private $db_table = "donnees_meteo"; 
@@ -20,7 +20,7 @@ class Data
 // Db connection 
     public function __construct($db)
     { 
-        $this->conn = $db;
+        $this->connection = $db;
     } 
 
 
@@ -28,7 +28,7 @@ class Data
     public function getData()
     {
         $sqlQuery = "SELECT id_releve_meteo, date_heure, temperature, humidite, id_sonde FROM " . $this->db_table . " JOIN " . $this->db_table_join;
-        $stmt = $this->conn->prepare($sqlQuery);
+        $stmt = $this->connection->prepare($sqlQuery);
         $stmt->execute(); 
         return $stmt;
     } 
@@ -43,7 +43,7 @@ class Data
                     temperature = :temperature, 
                     humidite = :humidite, 
                     id_sonde = :id_sonde";
-        $stmt = $this->conn->prepare($sqlQuery); 
+        $stmt = $this->connection->prepare($sqlQuery); 
     
         // sanitize 
         $this->id_releve_meteo=htmlspecialchars(strip_tags($this->id_releve_meteo)); 
@@ -68,7 +68,7 @@ class Data
     single public function getSingleData()
     { 
         $sqlQuery = "SELECT id_releve_meteo, date_heure, temperature, humidite, id_sonde FROM ". $this->db_table ." WHERE id = ? LIMIT 0,1"; 
-        $stmt = $this->conn->prepare($sqlQuery); 
+        $stmt = $this->connection->prepare($sqlQuery); 
         $stmt->bindParam(1, $this->id); 
         $stmt->execute();
         $dataRow = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -92,7 +92,7 @@ function updateData()
     id_sonde = :id_sonde
         WHERE id = :id";
 
-    $stmt = $this->conn->prepare($sqlQuery); 
+    $stmt = $this->connection->prepare($sqlQuery); 
     $this->id_releve_meteo=htmlspecialchars(strip_tags($this->id_releve_meteo)); 
     $this->date_heure=htmlspecialchars(strip_tags($this->date_heure)); 
     $this->temperature=htmlspecialchars(strip_tags($this->temperature)); 
@@ -118,7 +118,7 @@ function updateData()
         function deleteData()
         { 
             $sqlQuery = "DELETE FROM " . $this->db_table . " WHERE id = ?";
-            $stmt = $this->conn->prepare($sqlQuery); $this->id=htmlspecialchars(strip_tags($this->id)); 
+            $stmt = $this->connection->prepare($sqlQuery); $this->id=htmlspecialchars(strip_tags($this->id)); 
             $stmt->bindParam(1, $this->id);
 
             if($stmt->execute())
