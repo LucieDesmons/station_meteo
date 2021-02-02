@@ -8,7 +8,6 @@ class Data
 
 // Table 
     private $db_table = "donnees_meteo"; 
-    private $db_table_join = "releve_meteo";
 
 // Columns 
     public $id_releve_meteo; 
@@ -27,7 +26,7 @@ class Data
 // GET ALL 
     public function getData()
     {
-        $sqlQuery = "SELECT id_releve_meteo, date_heure, temperature, humidite, id_sonde FROM " . $this->db_table . " JOIN " . $this->db_table_join;
+        $sqlQuery = "SELECT id_releve_meteo, date_heure, temperature, humidite, id_sonde FROM " . $this->db_table;
         $stmt = $this->connection->prepare($sqlQuery);
         $stmt->execute(); 
         return $stmt;
