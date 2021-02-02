@@ -64,8 +64,8 @@ class Data
              }
              return false;
     }
-// READ 
-    single public function getSingleData()
+// READ single 
+    public function getSingleData()
     { 
         $sqlQuery = "SELECT id_releve_meteo, date_heure, temperature, humidite, id_sonde FROM ". $this->db_table ." WHERE id = ? LIMIT 0,1"; 
         $stmt = $this->connection->prepare($sqlQuery); 
@@ -79,8 +79,8 @@ class Data
          $this->id_sonde = $dataRow['id_sonde']; 
     } 
 
-// UPDATE public 
-function updateData()
+// UPDATE 
+    public function updateData()
 { 
     $sqlQuery = "UPDATE "
     . $this->db_table 
