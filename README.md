@@ -109,7 +109,7 @@
   <li><strong>Méthode :</strong> GET</li>
   <li><strong>Route :</strong> api/data/read_all_last.php</li>
   <li><strong>Paramètres :</strong> none</li>
-  <li><strong>Retour :</strong> {temperature: "temp", humidite: "rh", id_sonde: "id"} (pour chaque sonde existante)</li>
+  <li><strong>Retour :</strong> {temperature: "temp", humidite: "rh", id_sonde: "id", nom_emplacement: "emplacement"} (pour chaque sonde existante)</li>
 </ul>
 
 <h3>Route Users</h3>
