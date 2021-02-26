@@ -12,28 +12,28 @@
 <h4>Create</h4>
 
 <ul>
-  <li>Méthode : POST</li>
-  <li>Route : api/places/create.php</li>
-  <li>Paramètres : {nom_emplacement: "pièce"}</li>
-  <li>Retour : Place created successfully.</li>
+  <li><em>Méthode :</em> POST</li>
+  <li><em>Route :</em> api/places/create.php</li>
+  <li><em>Paramètres :</em> {nom_emplacement: "pièce"}</li>
+  <li><em>Retour :</em> Place created successfully.</li>
 </ul>
 
 <h4>Read</h4>
 
 <ul>
-  <li>Méthode : GET</li>
-  <li>Route : api/places/read.php</li>
-  <li>Paramètres : none</li>
-  <li>Retour : {nom_emplacement: "pièce"} (pour chaque pièce existante)</li>
+  <li><em>Méthode :</em> GET</li>
+  <li><em>Route :</em> api/places/read.php</li>
+  <li><em>Paramètres :</em> none</li>
+  <li><em>Retour :</em> {nom_emplacement: "pièce"} (pour chaque pièce existante)</li>
 </ul>
 
 <h4>Delete</h4>
 
 <ul>
-  <li>Méthode : POST</li>
-  <li>Route : api/places/delete.php</li>
-  <li>Paramètres : {nom_emplacement: "pièce"}</li>
-  <li>Retour : Place deleted successfully.</li>
+  <li><em>Méthode :</em> POST</li>
+  <li><em>Route :</em> api/places/delete.php</li>
+  <li><em>Paramètres :</em> {nom_emplacement: "pièce"}</li>
+  <li><em>Retour :</em> Place deleted successfully.</li>
 </ul>
 
 <h3>Route Sensors</h3>
@@ -41,37 +41,37 @@
 <h4>Create</h4>
 
 <ul>
-  <li>Méthode : POST</li>
-  <li>Route : </li>
-  <li>Paramètres : </li>
-  <li>Retour : </li>
+  <li><em>Méthode :</em> POST</li>
+  <li><em>Route :</em> </li>
+  <li><em>Paramètres :</em> </li>
+  <li><em>Retour :</em> </li>
 </ul>
 
 <h4>Read</h4>
 
 <ul>
-  <li>Méthode : GET</li>
-  <li>Route : </li>
-  <li>Paramètres : </li>
-  <li>Retour : </li>
+  <li><em>Méthode :</em> GET</li>
+  <li><em>Route :</em> </li>
+  <li><em>Paramètres :</em> </li>
+  <li><em>Retour :</em> </li>
 </ul>
 
 <h4>Delete</h4>
 
 <ul>
-  <li>Méthode : POST</li>
-  <li>Route : </li>
-  <li>Paramètres : </li>
-  <li>Retour : </li>
+  <li><em>Méthode :</em> POST</li>
+  <li><em>Route :</em> </li>
+  <li><em>Paramètres :</em> </li>
+  <li><em>Retour :</em> </li>
 </ul>
 
 <h4>Update</h4>
 
 <ul>
-  <li>Méthode : POST</li>
-  <li>Route : </li>
-  <li>Paramètres : </li>
-  <li>Retour : </li>
+  <li><em>Méthode :</em> POST</li>
+  <li><em>Route :</em> </li>
+  <li><em>Paramètres :</em> </li>
+  <li><em>Retour :</em> </li>
 </ul>
 
 <h3>Route Data</h3>
@@ -79,21 +79,57 @@
 <h4>Create</h4>
 
 <ul>
-  <li>Méthode : POST</li>
-  <li>Route : </li>
-  <li>Paramètres : </li>
-  <li>Retour : </li>
+  <li><em>Méthode :</em> POST</li>
+  <li><em>Route :</em> </li>
+  <li><em>Paramètres :</em> </li>
+  <li><em>Retour :</em> </li>
 </ul>
 
 <h4>Read</h4>
 
 <ul>
-  <li>Méthode : GET</li>
-  <li>Route : </li>
-  <li>Paramètres : </li>
-  <li>Retour : </li>
+  <li><em>Méthode :</em> GET</li>
+  <li><em>Route :</em> </li>
+  <li><em>Paramètres :</em> </li>
+  <li><em>Retour :</em> </li>
 </ul>
 
 <h3>Route Users</h3>
+
+<h4>Create</h4>
+
+<ul>
+  <li><em>Méthode :</em> POST</li>
+  <li><em>Route :</em> </li>
+  <li><em>Paramètres :</em> </li>
+  <li><em>Retour :</em> </li>
+</ul>
+
+<h4>Read</h4>
+
+<ul>
+  <li><em>Méthode :</em> GET</li>
+  <li><em>Route :</em> </li>
+  <li><em>Paramètres :</em> </li>
+  <li><em>Retour :</em> </li>
+</ul>
+
+<h4>Delete</h4>
+
+<ul>
+  <li><em>Méthode :</em> POST</li>
+  <li><em>Route :</em> </li>
+  <li><em>Paramètres :</em> </li>
+  <li><em>Retour :</em> </li>
+</ul>
+
+<h4>Update</h4>
+
+<ul>
+  <li><em>Méthode :</em> POST</li>
+  <li><em>Route :</em> </li>
+  <li><em>Paramètres :</em> </li>
+  <li><em>Retour :</em> </li>
+</ul>
 
 <h2>Application Front-End</h2>
