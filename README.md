@@ -81,8 +81,8 @@
 <ul>
   <li><strong>Méthode :</strong> POST</li>
   <li><strong>Route :</strong> api/data/create.php</li>
-  <li><strong>Paramètres :</strong> </li>
-  <li><strong>Retour :</strong> </li>
+  <li><strong>Paramètres :</strong> {id_sonde: "id", temperature: "temp", humidite: "rh"}</li>
+  <li><strong>Retour :</strong> Data created successfully.</li>
 </ul>
 
 <h4>Read</h4>
