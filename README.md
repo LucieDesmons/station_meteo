@@ -1,5 +1,3 @@
 # station_meteo
-Projet de station météo de la promo DI 2020 du CESI d'Ecully
-
-<<<<<<< HEAD
+<h1>Projet de station-météo de la promotion DI2020 du CESI d'Ecully</h1>
 Il faudra bien penser à documenter le projet au fur et à mesure :P
