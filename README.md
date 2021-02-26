@@ -24,7 +24,7 @@
   <li><strong>Méthode :</strong> GET</li>
   <li><strong>Route :</strong> api/places/read.php</li>
   <li><strong>Paramètres :</strong> none</li>
-  <li><strong>Retour :</strong> {nom_emplacement: "pièce"} (pour chaque pièce existante)</li>
+  <li><strong>Retour :</strong> {id_emplacement: "id", nom_emplacement: "pièce"} (pour chaque pièce existante)</li>
 </ul>
 
 <h4>Delete</h4>
@@ -42,36 +42,36 @@
 
 <ul>
   <li><strong>Méthode :</strong> POST</li>
-  <li><strong>Route :</strong> </li>
-  <li><strong>Paramètres :</strong> </li>
-  <li><strong>Retour :</strong> </li>
+  <li><strong>Route :</strong> api/sensors/create.php</li>
+  <li><strong>Paramètres :</strong> {id_sonde: "id"}</li>
+  <li><strong>Retour :</strong> Sensor created successfully.</li>
 </ul>
 
 <h4>Read</h4>
 
 <ul>
   <li><strong>Méthode :</strong> GET</li>
-  <li><strong>Route :</strong> </li>
-  <li><strong>Paramètres :</strong> </li>
-  <li><strong>Retour :</strong> </li>
-</ul>
-
-<h4>Delete</h4>
-
-<ul>
-  <li><strong>Méthode :</strong> POST</li>
-  <li><strong>Route :</strong> </li>
-  <li><strong>Paramètres :</strong> </li>
-  <li><strong>Retour :</strong> </li>
+  <li><strong>Route :</strong> api/sensors/read.php</li>
+  <li><strong>Paramètres :</strong> none</li>
+  <li><strong>Retour :</strong> {id_sonde: "id", nom_emplacement: "pièce"} (pour chaque sonde existante)</li>
 </ul>
 
 <h4>Update</h4>
 
 <ul>
   <li><strong>Méthode :</strong> POST</li>
-  <li><strong>Route :</strong> </li>
-  <li><strong>Paramètres :</strong> </li>
-  <li><strong>Retour :</strong> </li>
+  <li><strong>Route :</strong> api/sensors/update.php</li>
+  <li><strong>Paramètres :</strong> {id_sonde: "id", id_emplacement: "id"}</li>
+  <li><strong>Retour :</strong> Sensor's location updated successfully.</li>
+</ul>
+
+<h4>Delete</h4>
+
+<ul>
+  <li><strong>Méthode :</strong> POST</li>
+  <li><strong>Route :</strong> api/sensors/delete.php</li>
+  <li><strong>Paramètres :</strong> {id_sonde: "id"}</li>
+  <li><strong>Retour :</strong> Sensor deleted successfully.</li>
 </ul>
 
 <h3>Route Data</h3>
@@ -80,7 +80,7 @@
 
 <ul>
   <li><strong>Méthode :</strong> POST</li>
-  <li><strong>Route :</strong> </li>
+  <li><strong>Route :</strong> api/data/create.php</li>
   <li><strong>Paramètres :</strong> </li>
   <li><strong>Retour :</strong> </li>
 </ul>
@@ -89,9 +89,27 @@
 
 <ul>
   <li><strong>Méthode :</strong> GET</li>
-  <li><strong>Route :</strong> </li>
-  <li><strong>Paramètres :</strong> </li>
-  <li><strong>Retour :</strong> </li>
+  <li><strong>Route :</strong> api/data/read.php</li>
+  <li><strong>Paramètres :</strong> {id_sonde: "id", date_debut: "date", date_fin: "date"}</li>
+  <li><strong>Retour :</strong> {temperature: "temp", humidite: "rh", date: "date"} (pour chaque relevé entre date_debut et date_fin)</li>
+</ul>
+
+<h4>Read Last</h4>
+
+<ul>
+  <li><strong>Méthode :</strong> GET</li>
+  <li><strong>Route :</strong> api/data/read_last.php</li>
+  <li><strong>Paramètres :</strong> {id_sonde: "id"}</li>
+  <li><strong>Retour :</strong> {temperature: "temp", humidite: "rh"}</li>
+</ul>
+
+<h4>Read All Last</h4>
+
+<ul>
+  <li><strong>Méthode :</strong> GET</li>
+  <li><strong>Route :</strong> api/data/read_all_last.php</li>
+  <li><strong>Paramètres :</strong> none</li>
+  <li><strong>Retour :</strong> {temperature: "temp", humidite: "rh", id_sonde: "id"} (pour chaque sonde existante)</li>
 </ul>
 
 <h3>Route Users</h3>
