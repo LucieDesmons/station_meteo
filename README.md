@@ -30,7 +30,7 @@
 <h4>Delete</h4>
 
 <ul>
-  <li><strong>Méthode :</strong> POST</li>
+  <li><strong>Méthode :</strong> DELETE</li>
   <li><strong>Route :</strong> api/places/delete.php</li>
   <li><strong>Paramètres :</strong> {nom_emplacement: "pièce"}</li>
   <li><strong>Retour :</strong> Place deleted successfully.</li>
@@ -59,7 +59,7 @@
 <h4>Update</h4>
 
 <ul>
-  <li><strong>Méthode :</strong> POST</li>
+  <li><strong>Méthode :</strong> PUT</li>
   <li><strong>Route :</strong> api/sensors/update.php</li>
   <li><strong>Paramètres :</strong> {id_sonde: "id", id_emplacement: "id"}</li>
   <li><strong>Retour :</strong> Sensor's location updated successfully.</li>
@@ -68,7 +68,7 @@
 <h4>Delete</h4>
 
 <ul>
-  <li><strong>Méthode :</strong> POST</li>
+  <li><strong>Méthode :</strong> DELETE</li>
   <li><strong>Route :</strong> api/sensors/delete.php</li>
   <li><strong>Paramètres :</strong> {id_sonde: "id"}</li>
   <li><strong>Retour :</strong> Sensor deleted successfully.</li>
@@ -135,7 +135,7 @@
 <h4>Delete</h4>
 
 <ul>
-  <li><strong>Méthode :</strong> POST</li>
+  <li><strong>Méthode :</strong> DELETE</li>
   <li><strong>Route :</strong> </li>
   <li><strong>Paramètres :</strong> </li>
   <li><strong>Retour :</strong> </li>
@@ -144,7 +144,7 @@
 <h4>Update</h4>
 
 <ul>
-  <li><strong>Méthode :</strong> POST</li>
+  <li><strong>Méthode :</strong> PUT</li>
   <li><strong>Route :</strong> </li>
   <li><strong>Paramètres :</strong> </li>
   <li><strong>Retour :</strong> </li>
