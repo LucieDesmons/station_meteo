@@ -112,42 +112,4 @@
   <li><strong>Retour :</strong> {temperature: "temp", humidite: "rh", id_sonde: "id", nom_emplacement: "emplacement"} (pour chaque sonde existante)</li>
 </ul>
 
-<h3>Route Users</h3>
-
-<h4>Create</h4>
-
-<ul>
-  <li><strong>Méthode :</strong> POST</li>
-  <li><strong>Route :</strong> </li>
-  <li><strong>Paramètres :</strong> </li>
-  <li><strong>Retour :</strong> </li>
-</ul>
-
-<h4>Read</h4>
-
-<ul>
-  <li><strong>Méthode :</strong> GET</li>
-  <li><strong>Route :</strong> </li>
-  <li><strong>Paramètres :</strong> </li>
-  <li><strong>Retour :</strong> </li>
-</ul>
-
-<h4>Delete</h4>
-
-<ul>
-  <li><strong>Méthode :</strong> DELETE</li>
-  <li><strong>Route :</strong> </li>
-  <li><strong>Paramètres :</strong> </li>
-  <li><strong>Retour :</strong> </li>
-</ul>
-
-<h4>Update</h4>
-
-<ul>
-  <li><strong>Méthode :</strong> PUT</li>
-  <li><strong>Route :</strong> </li>
-  <li><strong>Paramètres :</strong> </li>
-  <li><strong>Retour :</strong> </li>
-</ul>
-
 <h2>Application Front-End</h2>
